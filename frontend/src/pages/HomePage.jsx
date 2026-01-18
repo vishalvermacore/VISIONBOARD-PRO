@@ -24,6 +24,7 @@ const HomePage = () => {
         console.log(error.response);
         if (error.response?.status === 429) {
           setIsRateLimited(true);
+          return;
         } else {
           toast.error("Failed to load notes");
         }
